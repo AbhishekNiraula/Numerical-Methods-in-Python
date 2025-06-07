@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 def f(x):
-    return x**3 + x**2 + x + 7
+    return x*np.log10(x) - 1.9
 
 x1 = float(input("Enter the first initial guess (x1): "))
 x2 = float(input("Enter the second initial guess (x2): "))
