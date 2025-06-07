@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 def f(x):
-    return x*np.exp(x) - np.sin(x)
+    return x**10 - 1
 
 x1 = float(input("Enter first approximation: "))
 x2 = float(input("Enter second approximation: "))

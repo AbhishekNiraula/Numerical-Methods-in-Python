@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 def f(x):
-    return np.exp(x) - 4 * np.sin(x)
+    return x**10 - 1
 
 a = float(input("Enter float approximation: "))
 b = float(input("Enter initial float approximation: "))
@@ -16,7 +16,7 @@ else:
     list = []
     while itr <= N:
         c = (a + b)/2
-        list.append([itr, a, b, c, f(c).round(4)])
+        list.append([itr, a, b, c, f(c)])
         if f(a)*f(c) < 0:
             b = c
         else:
