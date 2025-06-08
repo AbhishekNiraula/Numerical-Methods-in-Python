@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 def f(x):
-    return (100 - x**2) ** (1/3)
+    return (np.cos(x) + 3) / 2
 
 x0 = float(input("Enter the initial guess (x0): "))
 
