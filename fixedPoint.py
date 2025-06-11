@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 def f(x):
-    return (np.cos(x) + 3) / 2
+    return np.arctan(x)
 
 x0 = float(input("Enter the initial guess (x0): "))
 

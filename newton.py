@@ -32,17 +32,21 @@ else:
         if error <= e:
             print(f"The root is {b} in iteration {itr} with error {error}")
             list = pd.DataFrame(list, columns=['Iterations', 'Xn', 'f(Xn)', "f'(Xn)", 'Xn+1'])
-            print(list.to_string(index=False))
+            for _, row in list.iterrows():
+                print(' '.join(str(x) for x in row))
+                print()
+                print()
             break
         a = b
+        itr += 1
     if (itr > N):
-        print(f"Solution does not converge in {N} iterations")
+        print(f"Solution does not converge in {itr} iterations")
     
-    x = np.linspace(-5, 5, 1000)
-    plt.plot(x, f(x), color='blue')
-    plt.plot(x, g(f, x), color='red')
-    plt.axhline(0, 0, color='black')
-    plt.axvline(0, 0, color= 'black')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+    # x = np.linspace(-5, 5, 1000)
+    # plt.plot(x, f(x), color='blue')
+    # plt.plot(x, g(f, x), color='red')
+    # plt.axhline(0, 0, color='black')
+    # plt.axvline(0, 0, color= 'black')
+    # plt.legend()
+    # plt.grid(True)
+    # plt.show()
