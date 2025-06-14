@@ -41,12 +41,12 @@ else:
         itr += 1
     if (itr > N):
         print(f"Solution does not converge in {itr} iterations")
-    
-    # x = np.linspace(-5, 5, 1000)
-    # plt.plot(x, f(x), color='blue')
-    # plt.plot(x, g(f, x), color='red')
-    # plt.axhline(0, 0, color='black')
-    # plt.axvline(0, 0, color= 'black')
-    # plt.legend()
-    # plt.grid(True)
-    # plt.show()
+    x = np.linspace(-5, 5, 1000)
+    plt.plot(x, [f(i) for i in x], color='blue', label='f(x)')
+    plt.plot(x, [g(f, i) for i in x], color='red', label="f'(x)")
+    plt.axhline(0, color='black')
+    plt.axvline(0, color='black')
+    plt.legend()
+    plt.grid(True)
+    plt.title('Newton-Raphson Method Visualization')
+    plt.show()
