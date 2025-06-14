@@ -19,12 +19,12 @@ else:
     list = []
     while (itr <= N):
         x3 = (f(x2) * x1 - f(x1) * x2) / (f(x2) - f(x1))
-        list.append([itr, x1, x2, f(x1), f(x2), x3])
+        list.append([itr, x1, x2, f(x1), f(x2), x3, abs(f(x3))])
         x1 = x2
         x2 = x3
         error = abs(f(x3))
         if error < e:
-            list = pd.DataFrame(list, columns = ['Iteration', 'x1', 'x2', 'f(x1)', 'f(x2)', 'x3'])
+            list = pd.DataFrame(list, columns = ['Iteration', 'x1', 'x2', 'f(x1)', 'f(x2)', 'x3', 'Error'])
             for _, row in list.iterrows():
                 print(' '.join(str(x) for x in row))
                 print()
