@@ -13,7 +13,7 @@ for i in range(n):
     B.append(b)
     
 A = np.matrix(A)
-B = np.matrix(B)
+B = np.array(B).reshape(-1, 1)
 print(f"\n The coefficient matrix A is: \n A = \n{A}")
 print(f"\n The constant matrix B is: \n B = \n{B}")
 P,L,U = lu(A)
