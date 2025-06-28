@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def f(x):
-    return np.exp(x) - np.sin(x) - 9
+    return 3*x - (1+np.sin(x))**(1/2)
 
 a = float(input("Enter float approximation: "))
 b = float(input("Enter initial float approximation: "))
